@@ -6,6 +6,7 @@ Focus on the Opportunity class. The other class are simple constructors
 Run `dcover create com.example.FactoryExample.Opportunity`
 
 Note the test output has:
+
 No tests created for:                               12 methods
 
 INFO      8 R013: No inputs found that don't throw a trivial exception
