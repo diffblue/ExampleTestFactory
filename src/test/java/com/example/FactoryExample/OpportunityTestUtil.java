@@ -12,7 +12,7 @@ public class OpportunityTestUtil {
 
 
 //    @InterestingTestFactory
-//    public static Opportunity createOpportunityWithValidJob() {
+//    public static Opportunity createOpportunity() {
 //        Person.Address address = new Person.Address("123 Main Street", "London", "SW1A 1AA", "UK");
 //        Person person = new Person("Jane", "Doe", 25, "jane@example.com", "+441234567890", "AB123456C", address);
 //
