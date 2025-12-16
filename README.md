@@ -1,5 +1,8 @@
 # Example of how to use test factories to increase coverage
+
 Compile project with mvn clean install
+
+Focus on the Opportunity class. The other class are simple constructors
 Run `dcover create com.example.FactoryExample.Opportunity`
 
 Note the test output has:
