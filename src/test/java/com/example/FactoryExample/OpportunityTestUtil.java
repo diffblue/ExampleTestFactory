@@ -28,7 +28,7 @@ public class OpportunityTestUtil {
 //
 //        Tax tax = new Tax(new BigDecimal("50000.00"), "UK", 0);
 //
-//        Opportunity.Insurance insurance = new Opportunity.Insurance(Opportunity.InsuranceType.BASIC, new BigDecimal("100"), true);
+//        Insurance insurance = new Insurance(Insurance.InsuranceType.BASIC, new BigDecimal("100"), true);
 //        Opportunity.CreditHistory creditHistory = new Opportunity.CreditHistory(false, 0, LocalDate.now());
 //        Opportunity.EmploymentVerification employmentVerification = new Opportunity.EmploymentVerification(true, LocalDate.now(), "Standard");
 //
