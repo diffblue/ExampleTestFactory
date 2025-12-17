@@ -18,8 +18,8 @@ public class Job {
     private static final BigDecimal MIN_SALARY = new BigDecimal("18000");
     private static final BigDecimal MAX_SALARY = new BigDecimal("500000");
     private static final List<String> VALID_TITLES = Arrays.asList(
-        "Software Engineer", "Senior Software Engineer", "Lead Engineer", "Engineering Manager",
-        "Data Analyst", "Data Scientist", "Product Manager", "Designer", "QA Engineer"
+            "Software Engineer", "Senior Software Engineer", "Lead Engineer", "Engineering Manager",
+            "Data Analyst", "Data Scientist", "Product Manager", "Designer", "QA Engineer"
     );
 
     public Job(String title, String company, BigDecimal salary, int yearsExperience,
@@ -77,12 +77,12 @@ public class Job {
 
     public Job(String title, String company, BigDecimal salary) {
         this(title, company, salary, 0, EmploymentType.FULL_TIME,
-             new Department("General", "GEN"), LocalDate.now(), new Contract(12, true));
+                new Department("General", "GEN"), LocalDate.now(), new Contract(12, true));
     }
 
     public Job(String title, String company) {
         this(title, company, MIN_SALARY, 0, EmploymentType.FULL_TIME,
-             new Department("General", "GEN"), LocalDate.now(), new Contract(12, true));
+                new Department("General", "GEN"), LocalDate.now(), new Contract(12, true));
     }
 
     public enum EmploymentType {

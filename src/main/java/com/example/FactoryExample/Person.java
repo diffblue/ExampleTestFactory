@@ -90,9 +90,9 @@ public class Person {
 
         public boolean isComplete() {
             return street != null && !street.isEmpty() &&
-                   city != null && !city.isEmpty() &&
-                   postcode != null && !postcode.isEmpty() &&
-                   country != null && !country.isEmpty();
+                    city != null && !city.isEmpty() &&
+                    postcode != null && !postcode.isEmpty() &&
+                    country != null && !country.isEmpty();
         }
     }
 

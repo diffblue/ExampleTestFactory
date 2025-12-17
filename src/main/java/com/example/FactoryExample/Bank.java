@@ -19,7 +19,7 @@ public class Bank {
     private static final Pattern ACCOUNT_NUMBER_PATTERN = Pattern.compile("^\\d{8}$");
     private static final Pattern SORT_CODE_PATTERN = Pattern.compile("^\\d{2}-\\d{2}-\\d{2}$");
     private static final List<String> VALID_UK_BANKS = Arrays.asList(
-        "Barclays", "HSBC", "Lloyds", "NatWest", "Santander", "Halifax", "Nationwide"
+            "Barclays", "HSBC", "Lloyds", "NatWest", "Santander", "Halifax", "Nationwide"
     );
     private static final BigDecimal MAX_BALANCE = new BigDecimal("1000000");
 
@@ -72,12 +72,12 @@ public class Bank {
 
     public Bank(String accountNumber, String bankName, BigDecimal balance) {
         this(accountNumber, bankName, balance, AccountType.CHECKING, "00-00-00",
-             new CreditScore(700, "Good"), LocalDate.now(), new AccountHolder("", "", ""));
+                new CreditScore(700, "Good"), LocalDate.now(), new AccountHolder("", "", ""));
     }
 
     public Bank(String accountNumber, String bankName) {
         this(accountNumber, bankName, BigDecimal.ZERO, AccountType.CHECKING, "00-00-00",
-             new CreditScore(700, "Good"), LocalDate.now(), new AccountHolder("", "", ""));
+                new CreditScore(700, "Good"), LocalDate.now(), new AccountHolder("", "", ""));
     }
 
     public enum AccountType {

@@ -62,48 +62,13 @@ public class Opportunity {
 
     public Opportunity(Person person, Job job, Bank bank) {
         this(person, job, bank, new Tax(job.getSalary(), "UK", 0),
-             new Insurance(InsuranceType.BASIC, new BigDecimal("100"), true),
-             new CreditHistory(false, 0, LocalDate.now()),
-             new EmploymentVerification(true, LocalDate.now(), "Standard"));
+                new Insurance(Insurance.InsuranceType.BASIC, new BigDecimal("100"), true),
+                new CreditHistory(false, 0, LocalDate.now()),
+                new EmploymentVerification(true, LocalDate.now(), "Standard"));
     }
 
 
-    public enum InsuranceType {
-        BASIC, PREMIUM, COMPREHENSIVE
-    }
 
-    public static class Insurance {
-        private final InsuranceType type;
-        private final BigDecimal monthlyCost;
-        private final boolean active;
-
-        public Insurance(InsuranceType type, BigDecimal monthlyCost, boolean active) {
-            if (type == null) {
-                throw new IllegalArgumentException("Insurance type cannot be null");
-            }
-            if (monthlyCost == null || monthlyCost.compareTo(BigDecimal.ZERO) < 0) {
-                throw new IllegalArgumentException("Monthly cost must be non-negative");
-            }
-            if (monthlyCost.compareTo(new BigDecimal("10000")) > 0) {
-                throw new IllegalArgumentException("Monthly cost cannot exceed £10,000");
-            }
-            this.type = type;
-            this.monthlyCost = monthlyCost;
-            this.active = active;
-        }
-
-        public InsuranceType getType() {
-            return type;
-        }
-
-        public BigDecimal getMonthlyCost() {
-            return monthlyCost;
-        }
-
-        public boolean isActive() {
-            return active;
-        }
-    }
 
     public static class CreditHistory {
         private final boolean hasDefaultsInLastYear;
